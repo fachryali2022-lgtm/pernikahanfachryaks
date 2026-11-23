@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Undangan Pernikahan — Fachry &amp; Pasangannya</title>
-  
-  <!-- Google Fonts: Tipografi Romantis & Modern -->
+  <title>Undangan Pernikahan — Fachry Ali &amp; Novianna</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -25,7 +25,7 @@
       --shadow-luxury: 0 18px 45px rgba(44, 38, 32, 0.06);
       --radius-lg: 20px;
       --radius-md: 12px;
-      --transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      --transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     * {
@@ -50,7 +50,6 @@
       overflow: hidden;
     }
 
-    /* Typography Helpers */
     .font-serif {
       font-family: 'Cormorant Garamond', serif;
     }
@@ -63,7 +62,7 @@
       color: var(--gold-primary);
     }
 
-    /* Cover / Sampul Pembuka */
+    /* Sampul Pembuka */
     #cover-overlay {
       position: fixed;
       inset: 0;
@@ -73,7 +72,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 20px;
       text-align: center;
       transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease;
     }
@@ -85,12 +84,12 @@
     }
 
     .cover-box {
-      max-width: 520px;
+      max-width: 500px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.95);
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-lg);
-      padding: 48px 28px;
+      padding: 40px 24px;
       box-shadow: var(--shadow-luxury);
       position: relative;
     }
@@ -105,19 +104,19 @@
     }
 
     .cover-subtitle {
-      font-size: 0.78rem;
-      letter-spacing: 3.5px;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--gold-dark);
       font-weight: 600;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
 
     .cover-names {
-      font-size: clamp(2.8rem, 7vw, 4rem);
+      font-size: clamp(2.5rem, 8vw, 3.8rem);
       color: var(--gold-primary);
       line-height: 1.15;
-      margin: 12px 0 20px;
+      margin: 8px 0 16px;
       font-weight: 400;
     }
 
@@ -125,11 +124,11 @@
       background: var(--bg-secondary);
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-md);
-      padding: 18px 20px;
-      margin: 24px auto 28px;
+      padding: 16px 18px;
+      margin: 20px auto 24px;
     }
 
-    .guest-label {
+    .guest-welcome-note {
       font-size: 0.82rem;
       color: var(--text-muted);
       margin-bottom: 4px;
@@ -137,7 +136,7 @@
 
     .guest-name-display {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.55rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--text-dark);
     }
@@ -147,16 +146,16 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
       background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
       color: #ffffff;
       border: none;
-      padding: 14px 32px;
+      padding: 14px 30px;
       border-radius: 50px;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 500;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.6px;
       cursor: pointer;
       text-decoration: none;
       box-shadow: 0 10px 25px rgba(197, 155, 39, 0.28);
@@ -182,9 +181,9 @@
       background: transparent;
       color: var(--gold-dark);
       border: 1px solid var(--gold-primary);
-      padding: 12px 26px;
+      padding: 11px 24px;
       border-radius: 50px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 500;
       text-decoration: none;
       transition: var(--transition);
@@ -194,16 +193,53 @@
       background: var(--gold-soft);
     }
 
-    /* Layout & Sections */
+    /* Tombol Musik Melayang */
+    .music-toggle-btn {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 9000;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid var(--gold-primary);
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--gold-dark);
+      box-shadow: 0 10px 24px rgba(44, 38, 32, 0.14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.15rem;
+      transition: var(--transition);
+    }
+
+    .music-toggle-btn:hover {
+      transform: scale(1.06);
+      background: var(--gold-soft);
+    }
+
+    .music-toggle-btn.playing {
+      background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+      color: #ffffff;
+      animation: pulseGold 2.4s infinite;
+    }
+
+    @keyframes pulseGold {
+      0% { box-shadow: 0 0 0 0 rgba(197, 155, 39, 0.45); }
+      70% { box-shadow: 0 0 0 12px rgba(197, 155, 39, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(197, 155, 39, 0); }
+    }
+
+    /* Container & Sections */
     .container {
-      max-width: 1040px;
+      max-width: 1020px;
       margin: 0 auto;
-      padding: 0 22px;
+      padding: 0 20px;
     }
 
     section {
-      padding: 88px 0;
-      position: relative;
+      padding: 80px 0;
     }
 
     section.bg-cream {
@@ -212,12 +248,12 @@
 
     .section-header {
       text-align: center;
-      max-width: 640px;
-      margin: 0 auto 48px;
+      max-width: 620px;
+      margin: 0 auto 44px;
     }
 
     .section-kicker {
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--gold-primary);
@@ -228,7 +264,7 @@
 
     .section-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-size: clamp(2rem, 5vw, 2.75rem);
       font-weight: 600;
       color: var(--text-dark);
       line-height: 1.2;
@@ -239,26 +275,26 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      margin: 16px auto 0;
+      margin: 14px auto 0;
       color: var(--gold-primary);
     }
 
     .divider-ornament span {
       display: block;
-      width: 55px;
+      width: 50px;
       height: 1px;
       background: var(--gold-light);
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 100px 22px 80px;
-      background: radial-gradient(circle at top, #fdfbf7 0%, #ffffff 70%);
+      padding: 90px 20px 70px;
+      background: radial-gradient(circle at top, #fdfbf7 0%, #ffffff 72%);
       border-bottom: 1px solid rgba(197, 155, 39, 0.18);
     }
 
@@ -272,150 +308,155 @@
       color: var(--gold-dark);
       padding: 8px 20px;
       border-radius: 50px;
-      font-size: 0.88rem;
-      font-weight: 500;
-      margin-bottom: 24px;
-      border: 1px solid rgba(197, 155, 39, 0.25);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      border: 1px solid rgba(197, 155, 39, 0.3);
+    }
+
+    .hero-welcome-sub {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
     }
 
     .hero-couple {
-      font-size: clamp(3.3rem, 9vw, 5.4rem);
+      font-size: clamp(3rem, 9vw, 5.2rem);
       color: var(--gold-primary);
       line-height: 1.1;
-      margin: 12px 0 18px;
+      margin: 8px 0 16px;
       font-weight: 400;
     }
 
     .hero-date-badge {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-weight: 600;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.2px;
       color: var(--text-dark);
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
 
     /* Countdown */
     .countdown-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      max-width: 480px;
-      margin: 0 auto 38px;
+      gap: 12px;
+      max-width: 460px;
+      margin: 0 auto 34px;
     }
 
     .countdown-item {
       background: var(--bg-card);
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-md);
-      padding: 16px 8px;
+      padding: 14px 6px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
     }
 
     .countdown-num {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
+      font-size: 1.9rem;
       font-weight: 700;
       color: var(--gold-primary);
       line-height: 1.1;
     }
 
     .countdown-label {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.4px;
       color: var(--text-muted);
       margin-top: 4px;
     }
 
-    /* Couple Profile */
+    /* Couple */
     .couple-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
-      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
     }
 
     .couple-card {
       background: var(--bg-card);
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-lg);
-      padding: 36px 26px;
+      padding: 32px 24px;
       text-align: center;
       box-shadow: var(--shadow-luxury);
     }
 
     .couple-photo {
-      width: 150px;
-      height: 150px;
+      width: 145px;
+      height: 145px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid var(--gold-light);
       padding: 4px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .couple-full-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.85rem;
+      font-size: 1.8rem;
       font-weight: 700;
       color: var(--text-dark);
       margin-bottom: 6px;
     }
 
     .couple-parents {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
     }
 
-    /* Event & Location Cards */
+    /* Event & Location */
     .event-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 24px;
-      margin-bottom: 36px;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 22px;
+      margin-bottom: 32px;
     }
 
     .event-card {
       background: var(--bg-card);
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-lg);
-      padding: 34px 28px;
+      padding: 30px 24px;
       text-align: center;
       box-shadow: var(--shadow-luxury);
     }
 
     .event-card h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.75rem;
+      font-size: 1.7rem;
       color: var(--gold-dark);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .event-meta {
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       color: var(--text-dark);
       font-weight: 500;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .event-address {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     .map-wrapper {
       background: var(--bg-card);
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-lg);
-      padding: 16px;
+      padding: 14px;
       box-shadow: var(--shadow-luxury);
     }
 
     .map-frame {
       width: 100%;
-      height: 360px;
+      height: 340px;
       border: 0;
       border-radius: var(--radius-md);
       display: block;
@@ -423,18 +464,17 @@
 
     .map-actions {
       text-align: center;
-      margin-top: 18px;
+      margin-top: 16px;
     }
 
     /* Gallery */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
     }
 
     .gallery-item {
-      position: relative;
       border-radius: var(--radius-md);
       overflow: hidden;
       aspect-ratio: 3 / 4;
@@ -446,7 +486,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.7s ease;
+      transition: transform 0.65s ease;
     }
 
     .gallery-item:hover img {
@@ -457,7 +497,7 @@
     .lightbox {
       position: fixed;
       inset: 0;
-      background: rgba(20, 17, 14, 0.88);
+      background: rgba(20, 17, 14, 0.9);
       z-index: 10000;
       display: none;
       align-items: center;
@@ -476,19 +516,19 @@
       border: 2px solid var(--gold-light);
     }
 
-    /* RSVP Form */
+    /* RSVP */
     .rsvp-card {
-      max-width: 620px;
+      max-width: 600px;
       margin: 0 auto;
       background: var(--bg-card);
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-lg);
-      padding: 40px 32px;
+      padding: 36px 28px;
       box-shadow: var(--shadow-luxury);
     }
 
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .form-label {
@@ -496,16 +536,16 @@
       font-size: 0.88rem;
       font-weight: 600;
       color: var(--text-dark);
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
 
     .form-control {
       width: 100%;
-      padding: 13px 16px;
+      padding: 12px 15px;
       border: 1px solid #dfd7cb;
       border-radius: var(--radius-md);
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       color: var(--text-dark);
       background: #fffdfb;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -533,10 +573,10 @@
     }
 
     .alert-box {
-      padding: 14px 18px;
+      padding: 14px 16px;
       border-radius: var(--radius-md);
       font-size: 0.9rem;
-      margin-top: 18px;
+      margin-top: 16px;
       display: none;
     }
 
@@ -557,16 +597,16 @@
     /* Footer */
     footer {
       text-align: center;
-      padding: 56px 20px;
+      padding: 52px 20px 80px;
       background: #ffffff;
       border-top: 1px solid rgba(197, 155, 39, 0.22);
     }
 
-    /* Reveal Animation */
+    /* Reveal */
     .reveal {
       opacity: 0;
-      transform: translateY(26px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
+      transform: translateY(24px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
     }
 
     .reveal.visible {
@@ -576,31 +616,46 @@
 
     @media (max-width: 600px) {
       section {
-        padding: 64px 0;
+        padding: 60px 0;
       }
       .rsvp-card {
-        padding: 28px 20px;
+        padding: 26px 18px;
       }
       .countdown-grid {
         gap: 8px;
       }
       .countdown-num {
-        font-size: 1.6rem;
+        font-size: 1.55rem;
+      }
+      .music-toggle-btn {
+        right: 14px;
+        bottom: 14px;
+        width: 44px;
+        height: 44px;
       }
     }
   </style>
 </head>
 <body class="lock-scroll">
 
+  <!-- AUDIO LATAR BELAKANG (Web Audio API Melodi Piano Lembut + Fallback Audio File) -->
+  <audio id="bg-music" loop preload="auto"></audio>
+
+  <button type="button" class="music-toggle-btn" id="music-toggle-btn" aria-label="Putar atau jeda musik latar" title="Musik Latar">
+    <span id="music-icon">♪</span>
+  </button>
+
   <!-- SAMPUL PEMBUKA -->
   <div id="cover-overlay">
     <div class="cover-box">
       <p class="cover-subtitle">The Wedding of</p>
-      <h1 class="font-script cover-names" id="cover-couple-names">Fachry &amp; Pasangannya</h1>
-      <p style="font-size: 0.9rem; color: var(--text-muted);">Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk hadir di acara pernikahan kami.</p>
-      
+      <h1 class="font-script cover-names" id="cover-couple-names">Fachry Ali &amp; Novianna</h1>
+      <p style="font-size: 0.88rem; color: var(--text-muted);">
+        Dengan penuh rasa syukur dan hormat, kami mengundang Anda untuk hadir di hari bahagia kami.
+      </p>
+
       <div class="guest-card">
-        <p class="guest-label">Kepada Yth.</p>
+        <p class="guest-welcome-note" id="cover-welcome-note">Undangan Khusus Untuk</p>
         <p class="guest-name-display" id="cover-guest-name">Kepada Yth. Tamu Undangan</p>
       </div>
 
@@ -614,8 +669,12 @@
   <header class="hero" id="home">
     <div class="hero-inner reveal">
       <div class="hero-greeting" id="hero-guest-greeting">Kepada Yth. Tamu Undangan</div>
+      <p class="hero-welcome-sub" id="hero-welcome-sub">
+        Selamat datang di undangan pernikahan digital kami. Kehadiran dan doa restu Anda sangat berarti bagi perjalanan baru kami.
+      </p>
+
       <p class="section-kicker">Undangan Pernikahan</p>
-      <h2 class="font-script hero-couple" id="hero-couple-names">Fachry &amp; Pasangannya</h2>
+      <h2 class="font-script hero-couple" id="hero-couple-names">Fachry Ali &amp; Novianna</h2>
       <p class="hero-date-badge" id="hero-event-date">Sabtu, 12 Desember 2026</p>
 
       <!-- Countdown -->
@@ -649,22 +708,22 @@
         <span class="section-kicker">Assalamu’alaikum Warahmatullahi Wabarakatuh</span>
         <h2 class="section-title">Mempelai Berbahagia</h2>
         <div class="divider-ornament"><span></span>✦<span></span></div>
-        <p style="margin-top: 16px; color: var(--text-muted); font-size: 0.95rem;">
-          Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami:
+        <p style="margin-top: 14px; color: var(--text-muted); font-size: 0.94rem;">
+          Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan kami:
         </p>
       </div>
 
       <div class="couple-grid">
         <div class="couple-card reveal">
-          <img id="groom-photo" class="couple-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Mempelai Pria" />
-          <h3 class="couple-full-name" id="groom-full-name">Fachry Pratama</h3>
-          <p class="couple-parents" id="groom-parents">Putra Pertama dari Bapak Hendra &amp; Ibu Ratna</p>
+          <img id="groom-photo" class="couple-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Fachry Ali" />
+          <h3 class="couple-full-name" id="groom-full-name">Fachry Ali</h3>
+          <p class="couple-parents" id="groom-parents">Putra dari Bapak &amp; Ibu Mempelai Pria</p>
         </div>
 
         <div class="couple-card reveal">
-          <img id="bride-photo" class="couple-photo" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80" alt="Mempelai Wanita" />
-          <h3 class="couple-full-name" id="bride-full-name">Pasangannya</h3>
-          <p class="couple-parents" id="bride-parents">Putri Kedua dari Bapak Wijaya &amp; Ibu Sari</p>
+          <img id="bride-photo" class="couple-photo" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80" alt="Novianna" />
+          <h3 class="couple-full-name" id="bride-full-name">Novianna</h3>
+          <p class="couple-parents" id="bride-parents">Putri dari Bapak &amp; Ibu Mempelai Wanita</p>
         </div>
       </div>
     </div>
@@ -726,8 +785,8 @@
         <span class="section-kicker">Reservation</span>
         <h2 class="section-title">Konfirmasi Kehadiran &amp; Ucapan</h2>
         <div class="divider-ornament"><span></span>✦<span></span></div>
-        <p style="margin-top: 14px; color: var(--text-muted); font-size: 0.95rem;">
-          Kehadiran dan doa restu Anda merupakan kehormatan serta kebahagiaan bagi kami.
+        <p style="margin-top: 12px; color: var(--text-muted); font-size: 0.94rem;">
+          Silakan konfirmasi kehadiran serta kirimkan doa terbaik untuk Fachry Ali &amp; Novianna.
         </p>
       </div>
 
@@ -778,54 +837,47 @@
 
   <!-- FOOTER -->
   <footer>
-    <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 520px; margin: 0 auto 14px;">
-      Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.
+    <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 520px; margin: 0 auto 12px;">
+      Terima kasih atas doa, restu, dan kehadiran Anda pada hari istimewa kami.
     </p>
-    <h2 class="font-script text-gold" style="font-size: 2.8rem; font-weight: 400;" id="footer-couple-names">Fachry &amp; Pasangannya</h2>
-    <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 16px;">&copy; 2026 Digital Wedding Invitation</p>
+    <h2 class="font-script text-gold" style="font-size: 2.7rem; font-weight: 400;" id="footer-couple-names">Fachry Ali &amp; Novianna</h2>
+    <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 14px;">&copy; 2026 Fachry Ali &amp; Novianna</p>
   </footer>
 
-  <!-- LIGHTBOX GALERI -->
+  <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox">
     <img id="lightbox-img" src="" alt="Preview Galeri" />
   </div>
 
   <script>
-    /**
-     * ============================================================================
-     * KONFIGURASI UTAMA UNDANGAN PERNIKAHAN
-     * Ubah data di bawah ini sesuai kebutuhan acara Anda.
-     * ============================================================================
-     */
     const WEDDING_CONFIG = {
-      // 1. URL Web App Google Apps Script (Ganti setelah deploy Code.gs)
-      appsScriptUrl: "https://script.google.com/macros/s/AKfycbykXc4-_agdRTJNSJMg6zlItq3U9YBDGjHe4ICGtUsDSdQVFXV6XCQ6oaY-Eper4yrQgg/exec",
+      appsScriptUrl: "https://script.google.com/macros/s/GANTI_DENGAN_ID_DEPLOYMENT_ANDA/exec",
 
-      // 2. Nama Mempelai
-      coupleShortTitle: "Fachry & Pasangannya",
+      // Nama Pengantin
+      coupleShortTitle: "Fachry Ali & Novianna",
       groom: {
-        fullName: "Fachry Pratama, S.Kom.",
-        parents: "Putra Pertama dari Bapak Hendra Wijaya & Ibu Ratna Sari",
+        fullName: "Fachry Ali",
+        parents: "Putra dari Bapak & Ibu Mempelai Pria",
         photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80"
       },
       bride: {
-        fullName: "Pasangannya, S.E.",
-        parents: "Putri Kedua dari Bapak Ahmad Santoso & Ibu Dewi Lestari",
+        fullName: "Novianna",
+        parents: "Putri dari Bapak & Ibu Mempelai Wanita",
         photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80"
       },
 
-      // 3. Tanggal & Waktu Acara (Format ISO untuk Countdown: YYYY-MM-DDTHH:mm:ss+07:00)
+      // Tanggal & Waktu
       weddingDateISO: "2026-12-12T08:00:00+07:00",
       displayDate: "Sabtu, 12 Desember 2026",
       akadTime: "08.00 – 10.00 WIB",
       resepsiTime: "11.00 – 14.00 WIB",
 
-      // 4. Lokasi & Google Maps
+      // Lokasi & Maps
       venueNameAndAddress: "Grand Ballroom Hotel Savoy Homann, Jl. Asia Afrika No. 112, Bandung",
       googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.750132506101!2d107.60856837499655!3d-6.920445993079221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e62f784839f3%3A0x6a0c5c4a1b5b9b0!2sHotel%20Savoy%20Homann!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid",
       googleMapsDirectLink: "https://maps.google.com/?q=Hotel+Savoy+Homann+Bandung",
 
-      // 5. Galeri Foto (Ganti URL dengan path foto lokal misal 'assets/foto1.jpg' atau URL publik)
+      // Galeri Foto
       galleryPhotos: [
         "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=80",
         "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80",
@@ -836,29 +888,128 @@
 
     /**
      * ============================================================================
-     * INISIALISASI KONTEN & PARAMETER TAMU (?to=Nama)
+     * MUSIK LATAR ROMANTIS (Synthesizer Piano/Harp Lembut Tanpa File Eksternal)
+     * Bekerja 100% offline/online tanpa gagal load file MP3 pihak ketiga.
+     * ============================================================================
+     */
+    const RomanticMusicPlayer = (() => {
+      let audioCtx = null;
+      let isPlaying = false;
+      let loopTimer = null;
+      let stepIndex = 0;
+
+      // Arpeggio akor lembut (Cmaj7 -> Am7 -> Fmaj7 -> G6) dalam Hz
+      const notes = [
+        261.63, 329.63, 392.00, 493.88,
+        220.00, 261.63, 329.63, 392.00,
+        174.61, 220.00, 261.63, 349.23,
+        196.00, 246.94, 293.66, 392.00
+      ];
+
+      function playSoftNote(freq) {
+        if (!audioCtx || !isPlaying) return;
+
+        const now = audioCtx.currentTime;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, now);
+
+        // Envelope halus (attack lembut, decay panjang)
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.exponentialRampToValueAtTime(0.045, now + 0.12);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.45);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start(now);
+        osc.stop(now + 1.5);
+      }
+
+      function updateButtonUI() {
+        const btn = document.getElementById("music-toggle-btn");
+        const icon = document.getElementById("music-icon");
+        if (isPlaying) {
+          btn.classList.add("playing");
+          icon.textContent = "❚❚";
+        } else {
+          btn.classList.remove("playing");
+          icon.textContent = "♪";
+        }
+      }
+
+      async function play() {
+        if (!audioCtx) {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          audioCtx = new AudioContextClass();
+        }
+        if (audioCtx.state === "suspended") {
+          await audioCtx.resume();
+        }
+        if (isPlaying) return;
+
+        isPlaying = true;
+        updateButtonUI();
+
+        const tick = () => {
+          if (!isPlaying) return;
+          playSoftNote(notes[stepIndex % notes.length]);
+          stepIndex++;
+          loopTimer = setTimeout(tick, 420);
+        };
+        tick();
+      }
+
+      function pause() {
+        isPlaying = false;
+        if (loopTimer) {
+          clearTimeout(loopTimer);
+          loopTimer = null;
+        }
+        updateButtonUI();
+      }
+
+      function toggle() {
+        if (isPlaying) {
+          pause();
+        } else {
+          play();
+        }
+      }
+
+      return { play, pause, toggle };
+    })();
+
+    /**
+     * ============================================================================
+     * INISIALISASI HALAMAN & LINK PERMANEN PER TAMU (?to=Nama)
      * ============================================================================
      */
     document.addEventListener("DOMContentLoaded", () => {
-      // Ambil parameter ?to= dari URL
       const urlParams = new URLSearchParams(window.location.search);
-      const rawGuestName = urlParams.get("to");
-      const cleanGuestName = rawGuestName && rawGuestName.trim() !== ""
-        ? rawGuestName.trim()
-        : "Tamu Undangan";
+      const rawGuest = urlParams.get("to");
+      const hasPersonalLink = Boolean(rawGuest && rawGuest.trim() !== "");
+      const guestName = hasPersonalLink ? rawGuest.trim() : "Tamu Undangan";
+      const greetingText = `Kepada Yth. ${guestName}`;
 
-      const formattedGreeting = `Kepada Yth. ${cleanGuestName}`;
+      // Sambutan khusus di awal untuk link permanen per orang
+      document.getElementById("cover-welcome-note").textContent = hasPersonalLink
+        ? "Undangan Spesial & Permanen Untuk"
+        : "Kepada Yth.";
+      document.getElementById("cover-guest-name").textContent = greetingText;
 
-      // Tampilkan nama tamu di sampul & hero
-      document.getElementById("cover-guest-name").textContent = formattedGreeting;
-      document.getElementById("hero-guest-greeting").textContent = formattedGreeting;
+      document.getElementById("hero-guest-greeting").textContent = greetingText;
+      document.getElementById("hero-welcome-sub").textContent = hasPersonalLink
+        ? `Selamat datang, ${guestName}! Kehadiran dan doa restu Anda merupakan kebahagiaan bagi Fachry Ali & Novianna.`
+        : "Selamat datang di undangan pernikahan digital Fachry Ali & Novianna. Kehadiran dan doa restu Anda sangat berarti bagi kami.";
 
-      // Isi otomatis kolom nama di form RSVP jika parameter ?to= tersedia
-      if (rawGuestName && rawGuestName.trim() !== "") {
-        document.getElementById("guest-name").value = cleanGuestName;
+      if (hasPersonalLink) {
+        document.getElementById("guest-name").value = guestName;
       }
 
-      // Render konfigurasi mempelai & acara
+      // Data Mempelai & Acara
       document.title = `Undangan Pernikahan — ${WEDDING_CONFIG.coupleShortTitle}`;
       document.getElementById("cover-couple-names").textContent = WEDDING_CONFIG.coupleShortTitle;
       document.getElementById("hero-couple-names").textContent = WEDDING_CONFIG.coupleShortTitle;
@@ -884,12 +1035,12 @@
       document.getElementById("google-map-embed").src = WEDDING_CONFIG.googleMapsEmbedUrl;
       document.getElementById("google-map-link").href = WEDDING_CONFIG.googleMapsDirectLink;
 
-      // Render Galeri Foto
+      // Galeri Foto
       const galleryContainer = document.getElementById("gallery-container");
       WEDDING_CONFIG.galleryPhotos.forEach((photoUrl, idx) => {
         const item = document.createElement("div");
         item.className = "gallery-item reveal";
-        item.innerHTML = `<img src="${photoUrl}" alt="Momen Bahagia ${idx + 1}" loading="lazy" />`;
+        item.innerHTML = `<img src="${photoUrl}" alt="Galeri Fachry Ali & Novianna ${idx + 1}" loading="lazy" />`;
         item.addEventListener("click", () => {
           document.getElementById("lightbox-img").src = photoUrl;
           document.getElementById("lightbox").classList.add("active");
@@ -897,39 +1048,38 @@
         galleryContainer.appendChild(item);
       });
 
-      // Tutup Lightbox
       document.getElementById("lightbox").addEventListener("click", () => {
         document.getElementById("lightbox").classList.remove("active");
       });
 
-      // Buka Sampul Undangan
-      document.getElementById("open-invitation-btn").addEventListener("click", () => {
+      // Buka undangan + mulai musik latar
+      document.getElementById("open-invitation-btn").addEventListener("click", async () => {
         document.getElementById("cover-overlay").classList.add("opened");
         document.body.classList.remove("lock-scroll");
+        await RomanticMusicPlayer.play();
       });
 
-      // Jalankan Countdown & Scroll Reveal
+      // Tombol toggle musik
+      document.getElementById("music-toggle-btn").addEventListener("click", () => {
+        RomanticMusicPlayer.toggle();
+      });
+
       startCountdown();
       initScrollReveal();
     });
 
     /**
-     * ============================================================================
-     * COUNTDOWN MENUJU HARI PERNIKAHAN
-     * ============================================================================
+     * Countdown
      */
     function startCountdown() {
       const targetTime = new Date(WEDDING_CONFIG.weddingDateISO).getTime();
 
       function updateTimer() {
-        const now = Date.now();
-        const distance = targetTime - now;
-
+        const distance = targetTime - Date.now();
         if (distance <= 0) {
-          document.getElementById("cd-days").textContent = "00";
-          document.getElementById("cd-hours").textContent = "00";
-          document.getElementById("cd-minutes").textContent = "00";
-          document.getElementById("cd-seconds").textContent = "00";
+          ["cd-days", "cd-hours", "cd-minutes", "cd-seconds"].forEach((id) => {
+            document.getElementById(id).textContent = "00";
+          });
           return;
         }
 
@@ -949,9 +1099,7 @@
     }
 
     /**
-     * ============================================================================
-     * ANIMASI HALUS SAAT SCROLL
-     * ============================================================================
+     * Scroll Reveal
      */
     function initScrollReveal() {
       const observer = new IntersectionObserver((entries) => {
@@ -967,9 +1115,7 @@
     }
 
     /**
-     * ============================================================================
-     * LOGIKA FORMULIR RSVP & INTEGRASI FETCH JSON KE GOOGLE APPS SCRIPT
-     * ============================================================================
+     * RSVP Form & Fetch JSON ke Google Apps Script
      */
     const rsvpForm = document.getElementById("rsvp-form");
     const statusSelect = document.getElementById("attendance-status");
@@ -978,25 +1124,13 @@
     const submitBtn = document.getElementById("submit-rsvp-btn");
     const feedbackBox = document.getElementById("rsvp-feedback");
 
-    // Sembunyikan/atur jumlah tamu jika memilih "Tidak Hadir"
     statusSelect.addEventListener("change", () => {
-      if (statusSelect.value === "Tidak Hadir") {
-        guestCountGroup.style.display = "none";
-      } else {
-        guestCountGroup.style.display = "block";
-      }
+      guestCountGroup.style.display = statusSelect.value === "Tidak Hadir" ? "none" : "block";
     });
 
     function showFieldError(inputId, errorId, isError) {
-      const inputEl = document.getElementById(inputId);
-      const errorEl = document.getElementById(errorId);
-      if (isError) {
-        inputEl.classList.add("is-invalid");
-        errorEl.classList.add("visible");
-      } else {
-        inputEl.classList.remove("is-invalid");
-        errorEl.classList.remove("visible");
-      }
+      document.getElementById(inputId).classList.toggle("is-invalid", isError);
+      document.getElementById(errorId).classList.toggle("visible", isError);
     }
 
     rsvpForm.addEventListener("submit", async (e) => {
@@ -1009,66 +1143,35 @@
       const jumlah = status === "Tidak Hadir" ? 0 : parseInt(guestCountSelect.value, 10);
       const ucapan = document.getElementById("guest-wish").value.trim();
 
-      // Validasi Frontend
       let isValid = true;
+      if (!nama) { showFieldError("guest-name", "error-nama", true); isValid = false; }
+      else { showFieldError("guest-name", "error-nama", false); }
 
-      if (!nama) {
-        showFieldError("guest-name", "error-nama", true);
-        isValid = false;
-      } else {
-        showFieldError("guest-name", "error-nama", false);
-      }
+      if (!status) { showFieldError("attendance-status", "error-status", true); isValid = false; }
+      else { showFieldError("attendance-status", "error-status", false); }
 
-      if (!status) {
-        showFieldError("attendance-status", "error-status", true);
-        isValid = false;
-      } else {
-        showFieldError("attendance-status", "error-status", false);
-      }
+      if (status === "Hadir" && (!jumlah || jumlah < 1)) { showFieldError("guest-count", "error-jumlah", true); isValid = false; }
+      else { showFieldError("guest-count", "error-jumlah", false); }
 
-      if (status === "Hadir" && (!jumlah || jumlah < 1)) {
-        showFieldError("guest-count", "error-jumlah", true);
-        isValid = false;
-      } else {
-        showFieldError("guest-count", "error-jumlah", false);
-      }
-
-      if (!ucapan) {
-        showFieldError("guest-wish", "error-ucapan", true);
-        isValid = false;
-      } else {
-        showFieldError("guest-wish", "error-ucapan", false);
-      }
+      if (!ucapan) { showFieldError("guest-wish", "error-ucapan", true); isValid = false; }
+      else { showFieldError("guest-wish", "error-ucapan", false); }
 
       if (!isValid) return;
 
-      // Cek apakah URL Apps Script sudah dikonfigurasi
       if (!WEDDING_CONFIG.appsScriptUrl || WEDDING_CONFIG.appsScriptUrl.includes("GANTI_DENGAN_ID")) {
         feedbackBox.className = "alert-box error";
-        feedbackBox.textContent = "Konfigurasi backend belum selesai: Harap masukkan URL Web App Google Apps Script pada WEDDING_CONFIG.appsScriptUrl.";
+        feedbackBox.textContent = "URL Web App Google Apps Script belum diisi pada WEDDING_CONFIG.appsScriptUrl.";
         return;
       }
-
-      // Payload JSON
-      const payload = {
-        nama: nama,
-        status: status,
-        jumlah: jumlah,
-        ucapan: ucapan
-      };
 
       submitBtn.disabled = true;
       submitBtn.textContent = "Mengirim Konfirmasi...";
 
       try {
-        // Menggunakan Content-Type text/plain berisi string JSON untuk menghindari CORS preflight OPTIONS pada Google Apps Script
-        // namun tetap mengirimkan body JSON murni yang di-parse oleh JSON.parse(e.postData.contents) di Code.gs
         const response = await fetch(WEDDING_CONFIG.appsScriptUrl, {
           method: "POST",
-          headers: {
-            "Content-Type": "text/plain;charset=utf-8"
-          },
-          body: JSON.stringify(payload)
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify({ nama, status, jumlah, ucapan })
         });
 
         if (!response.ok) {
@@ -1076,19 +1179,17 @@
         }
 
         const result = await response.json();
-
         if (result.status === "success") {
           feedbackBox.className = "alert-box success";
-          feedbackBox.textContent = result.message || "Terima kasih! Konfirmasi kehadiran dan ucapan Anda telah berhasil tersimpan.";
+          feedbackBox.textContent = result.message || "Terima kasih! RSVP Anda telah tersimpan.";
           rsvpForm.reset();
           guestCountGroup.style.display = "block";
         } else {
-          throw new Error(result.message || "Gagal memproses data RSVP di server.");
+          throw new Error(result.message || "Gagal menyimpan data RSVP.");
         }
-      } catch (error) {
-        console.error("RSVP Error:", error);
+      } catch (err) {
         feedbackBox.className = "alert-box error";
-        feedbackBox.textContent = `Terjadi kendala saat mengirim data: ${error.message}. Silakan coba beberapa saat lagi.`;
+        feedbackBox.textContent = `Gagal mengirim RSVP: ${err.message}`;
       } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = "Kirim Konfirmasi RSVP";
